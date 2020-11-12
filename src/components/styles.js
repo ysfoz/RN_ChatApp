@@ -7,7 +7,9 @@ export const input = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
   },
-  textInput: {},
+  textInput: {
+    paddingVertical:10
+  },
 });
 
 export const button = StyleSheet.create({
