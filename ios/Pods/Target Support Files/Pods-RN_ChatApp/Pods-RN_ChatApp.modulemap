@@ -1,0 +1,6 @@
+module Pods_RN_ChatApp {
+  umbrella header "Pods-RN_ChatApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
