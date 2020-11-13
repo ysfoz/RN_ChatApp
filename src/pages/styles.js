@@ -1,10 +1,13 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient'
 
 export const authStyle = StyleSheet.create({
   container: {
+
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  
   },
   logo: {
     height: Dimensions.get('window').height / 4,
@@ -14,7 +17,11 @@ export const authStyle = StyleSheet.create({
       color: 'purple',
       fontSize: 35,
       fontWeight: 'bold'
-  }
+  },
+  linearGradient: {
+    flex: 1,
+    borderRadius: 5
+  },
 });
 
 export const timelinePage = StyleSheet.create({
