@@ -11,3 +11,7 @@ export function resolveAuthError(code) {
     }
             
 }
+
+//hem login hemde sign kismi icin hatalarin tamamini burada belirtelim
+// sign sayfasinda 2 tane gorev var
+//

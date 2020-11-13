@@ -9,9 +9,17 @@ const PostInput = (props) => {
 
   return (
     <View style={post_input.container}>
-      {
-        // ...
-      }
+     <View style ={post_input.inputContainer}>
+       <TextInput 
+       multiline
+       placeholder = 'Schriebe something...'
+       onChangeText= {(val)=> setPostText(val)} />
+     </View>
+     <TouchableOpacity 
+     style= {{justifyContent:'center',}} 
+     onPress = {()=>props.onSendPost(postText)}>
+    <Icon name = 'telegram' size={30} color ='yellow'/>
+     </TouchableOpacity>
     </View>
   );
 };

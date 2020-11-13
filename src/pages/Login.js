@@ -27,7 +27,7 @@ const Login = (props) => {
    if (userEmail && userPass){
     auth()
       .signInWithEmailAndPassword(userEmail,userPass)
-      .then(() =>alert ("ok"))
+      .then(() => props.navigation.navigate('Timeline'))
       .catch((error) => Alert.alert('Gelb-Schawrz',resolveAuthError(error.code)))
  }else{Alert.alert('Gelb-Schwarz','empty values')}
 }
@@ -46,7 +46,7 @@ const Login = (props) => {
       style={{flex: 1, backgroundColor: '#cfd8dc'}}
       behavior = {Platform.OS == 'ios' ? 'padding' : 'height' }>
 
-        <LinearGradient colors={['black','#FCEA1D']} style={authStyle.linearGradient} >
+        <LinearGradient colors={['black','#FCEA1D','black']} style={authStyle.linearGradient} >
         <ScrollView contentContainerStyle={{flex: 1}}>
           <View style={authStyle.container}>
 

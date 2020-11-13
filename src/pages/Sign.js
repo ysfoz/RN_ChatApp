@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   SafeAreaView,
   Dimensions,
@@ -7,12 +7,33 @@ import {
   Image,
   ScrollView,
   KeyboardAvoidingView,
+  Alert,
 } from 'react-native';
+import auth from '@react-native-firebase/auth'
 
 import {authStyle} from './styles';
 import {Input, Button} from '../components';
 
 const Sign = (props) => {
+// passrepaet kullanmadanyapmayi deneyelim,ona gore bir yapi olusturalim
+  const[userEmail,setUserEmail] =useState('')
+  const[userPass,setUserPass] =useState('')
+  const[passRepeat,setPassRepeat] = useState('')
+
+  async function sign (){
+    // gecerli password un girilip girilmedigini kontrol edelim REGEX yada kendi yazdigimiz kod
+    // login de oldugu gibi olusan hatalara gore mesajlari kendimiz yazdiralim.
+    if (userPass === passRepeat){
+      try{
+        await auth().createUserWithEmailAndPassword(userEmail,userPass);
+        props.navigation.goBack();
+      }catch (error){
+        Alert.alert('Gelb-Schwarz','Es gibt ein Problem')
+      } 
+    }else{
+      Alert.alert('Gelb-Schwarz','Password are not match')
+    }
+  }
   return (
     <SafeAreaView style={{flex: 1}}>
       <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#cfd8dc'}}>
@@ -30,6 +51,7 @@ const Sign = (props) => {
               placeholder : 'Scrieben Sie Ihre email',
               keyboardType: 'email-address'
             }}
+            onType = {(value)=> setUserEmail(value)}
            
             />
             <Input
@@ -37,15 +59,17 @@ const Sign = (props) => {
               placeholder : 'Kreativieren Sie Ihre Pass',
               secureTextEntry: true
             }}
+            onType = {(value)=> setUserPass(value)}
             
             /><Input
             inputProps = {{
               placeholder : 'Scrieben Sie  das Pass nochmal',
               secureTextEntry: true
             }}
+            onType = {(value)=> setPassRepeat(value)}
           />
 
-            <Button title = 'Kreativieren Konto'/>
+            <Button title = 'Kreativieren Konto' onPress = {sign}/>
             <Button
              title = 'Stornieren' 
              noBorder
