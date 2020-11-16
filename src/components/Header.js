@@ -15,8 +15,10 @@ const Header = (props) => {
        name = 'hexagon-multiple' 
        size ={30} 
        color = 'yellow' 
-       onPress={props.onTopicModalSelect}/>
-
+       onPress={props.onTopicModalSelect}
+       style={{marginRight:10}}
+       />
+      
       <Icon 
        name = 'login' 
        size ={30} 

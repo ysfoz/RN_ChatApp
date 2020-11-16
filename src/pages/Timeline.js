@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import moment from 'moment'
 import {SafeAreaView, View, Text, FlatList} from 'react-native';
 import auth from '@react-native-firebase/auth'
 import database from '@react-native-firebase/database'
@@ -8,27 +9,49 @@ import {PostItem, PostInput, Header, TopicSelectModal} from '../components';
 
 const user = auth().currentUser; // firebase kullanildiginda usestorage yada redux a
 // gerek kalmasdan , bu sekilde verilere ulasmamk mumkun.
+console.log('buuuu',user.email.split('@')[0])
 const Timeline = () => {
 
   const [topicModalFlag,setTopicModalFlag] = useState(true)
   const [selectedTopic,setSelectedTopic] = useState(null)
+  const [postList,setPostList] = useState([])
 
   const selectingTopic =(value)=>{
+    database().ref(`/${selectedTopic}/`).off('value')
+
     setSelectedTopic(value);
     setTopicModalFlag(false)
 
     database()
-    .ref()
+    .ref(`${value}`)
     // . on yerine .once yazilsa guncelleme yapmaz, yani axios gibi veriyi bir defa alir, .on olunca her degisikligi okur.
     .on('value',(snapshot)=>{
-      console.log(snapshot.val())
+      const data = snapshot.val();
+      const formattedData = Object.keys(data).map((key) =>({...data[key]}))
+
+      formattedData.sort((a,b) =>{
+        return new Date(b.time) - new Date(a.time)
+      })
+
+      setPostList(formattedData)
     })
 
   }
   
   const sendingPost = (value)=>{
-    console.log(value)
+    const postObject = {
+      userMail : user.email,
+      postText : value,
+      time : moment().toISOString()
+    }
+    console.log(postObject.userMail)
+    postObject.postText && database().ref(`${selectedTopic}/`).push(postObject)
+    console.log(postObject)
   }
+
+  const renderPosts = ({item}) => <PostItem post ={item} />
+
+  
 
   return (
     <SafeAreaView style={timelinePage.container}>
@@ -36,11 +59,12 @@ const Timeline = () => {
         <Header
         title ={selectedTopic}
         onTopicModalSelect = {() => setTopicModalFlag(true)}
+        onLogOut = {() => auth().signOut()}
         />
         <FlatList
-        keyExtractor = {null}
-        data={[]}
-        renderItem ={()=> null}
+        keyExtractor = {(_,i) => i.toString()}
+        data={postList}
+        renderItem ={renderPosts}
         />
         <PostInput
         onSendPost ={sendingPost}

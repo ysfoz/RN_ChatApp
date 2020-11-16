@@ -14,4 +14,11 @@ export function resolveAuthError(code) {
 
 //hem login hemde sign kismi icin hatalarin tamamini burada belirtelim
 // sign sayfasinda 2 tane gorev var
+// topic select te modal kismina bir buton ekleyelim, yeni topic eklemek ve silmek icin
+// ayrica yine topic modal a bir search bar ekleyelim.
+// bi search te konusma bolumune eklenebilir.
+// en alta navigation ekleyelim, loginden sonra o sekilde
+// bos mesajlari gondermesin-- bunu ekledim
+// gruplari sifreli yapabilir miyiz ?
+// mesajlari baska kullanicidan geldiginde saga sola atma?
 //
