@@ -65,13 +65,14 @@ export const postitem = StyleSheet.create({
 
 export const post_input = StyleSheet.create({
    container: {
-      width: Dimensions.get('window').width * 0.9,
-      alignSelf: 'center',
+      width: Dimensions.get('window').width * 0.87,
+      // alignSelf: 'center',
       bottom: 10,
-      position: 'absolute',
+      position: 'relative',
       backgroundColor: '#e0e0e0',
-      borderRadius: 5,
-      padding: 5,
+      borderRadius: 25,
+      paddingHorizontal: 10,
+      paddingVertical:10,
       flexDirection: 'row',
       borderWidth: 1,
       borderColor: "#b0bec5"

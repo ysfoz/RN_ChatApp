@@ -8,17 +8,25 @@ const PostInput = (props) => {
   const [postText, setPostText] = React.useState('');
 
   return (
+    <View >
     <View style={post_input.container}>
      <View style ={post_input.inputContainer}>
        <TextInput 
+       style={{fontSize:20}}
        multiline
        placeholder = 'Schriebe something...'
-       onChangeText= {(val)=> setPostText(val)} />
+       onChangeText= {(val)=> setPostText(val)} 
+       clearTextOnFocus= {true}
+       autoFocus ={true}
+       />
+       
+     </View>
+    
      </View>
      <TouchableOpacity 
-     style= {{justifyContent:'center',}} 
+     style= {{backgroundColor:'black',position:'absolute',right:1, bottom:10,borderRadius:30}} 
      onPress = {()=>props.onSendPost(postText)}>
-    <Icon name = 'telegram' size={30} color ='yellow'/>
+    <Icon name = 'telegram' size={50} color ='yellow'/>
      </TouchableOpacity>
     </View>
   );
