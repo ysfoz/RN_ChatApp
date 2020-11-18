@@ -4,8 +4,16 @@
 ## Description
 .
 
-## Video
+## Images
 
+<img src = "./images/1.png" width =500>
+<img src = "./images/2.png" width =500>
+<img src = "./images/3.png" width =500>
+<img src = "./images/4.png" width =500>
+<img src = "./images/5.png" width =500>
+<img src = "./images/6.png" width =500>
+<img src = "./images/7.png" width =500>
+<img src = "./images/8.png" width =500>
 
 
 
@@ -15,16 +23,16 @@
 - https://reactnative.dev/help
 - Contributors from https://stackoverflow.com
 
-### for API
-
 
 
 ### for Packages
 
 - https://reactnavigation.org
-- https://github.com/axios/axios
-- https://github.com/react-native-modal/react-native-modal
-- https://github.com/oblador/react-native-animatable
+- https://firebase.google.com
+- https://github.com/react-native-modal
+- https://momentjs.com
+- https://github.com/oblador/react-native-vector-icons
+
 
 
 ## Contact
