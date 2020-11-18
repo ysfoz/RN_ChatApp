@@ -24,9 +24,9 @@ const PostInput = (props) => {
     
      </View>
      <TouchableOpacity 
-     style= {{backgroundColor:'black',position:'absolute',right:1, bottom:10,borderRadius:30}} 
+     style= {{backgroundColor:'#FDE100',position:'absolute',right:1, bottom:10,borderRadius:30}} 
      onPress = {()=>props.onSendPost(postText)}>
-    <Icon name = 'telegram' size={50} color ='yellow'/>
+    <Icon name = 'telegram' size={50} color ='black'/>
      </TouchableOpacity>
     </View>
   );

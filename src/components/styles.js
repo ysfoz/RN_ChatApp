@@ -14,7 +14,7 @@ export const input = StyleSheet.create({
 
 export const button = StyleSheet.create({
   container: {
-    backgroundColor: 'purple',
+    backgroundColor: 'black',
     margin: 10,
     padding: 10,
     alignItems: 'center',
@@ -23,6 +23,7 @@ export const button = StyleSheet.create({
   title: {
     color: 'white',
     fontWeight: 'bold',
+    fontSize:20
   },
 });
 
@@ -34,8 +35,9 @@ export const button_outline = StyleSheet.create({
     borderRadius: 5,
   },
   title: {
-    color: 'purple',
+    color: '#FDE100',
     fontWeight: 'bold',
+    fontSize:20
   },
 });
 
@@ -43,23 +45,31 @@ export const postitem = StyleSheet.create({
   container: {
     marginVertical: 10,
     backgroundColor: 'white',
+    width:Dimensions.get('screen').width *0.86,
+    borderRadius:10,
+    marginLeft:5
   },
   headerContainer: {
     padding: 5,
-    backgroundColor: '#9c27b0',
+    backgroundColor: 'rgba(253,225,0,0.5)',
     justifyContent: 'space-between',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderTopRightRadius:10,
+    borderTopLeftRadius:10
   },
   username: {
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
   },
   bodyContainer: {
      padding: 5
   },
   time: {
-    color: 'white',
+    color: 'black',
     fontStyle: 'italic'
+  },
+  Text:{
+    fontSize:18
   }
 });
 
@@ -99,7 +109,7 @@ export const header = StyleSheet.create({
    text: {
       fontSize: 30,
       fontWeight: 'bold',
-      color: '#78909c'
+      color: '#FDE100'
    },  
 });
 

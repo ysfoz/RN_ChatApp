@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient'
+
 
 export const authStyle = StyleSheet.create({
   container: {
@@ -14,8 +14,8 @@ export const authStyle = StyleSheet.create({
     resizeMode: 'contain',
   },
   logoText: {
-      color: 'purple',
-      fontSize: 35,
+      color: 'black',
+      fontSize: 30,
       fontWeight: 'bold'
   },
   linearGradient: {
@@ -27,6 +27,6 @@ export const authStyle = StyleSheet.create({
 export const timelinePage = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cfd8dc'
+    backgroundColor: 'black'
   },
 });

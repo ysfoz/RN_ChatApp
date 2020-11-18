@@ -3,21 +3,22 @@ import moment from 'moment'
 import {SafeAreaView, View, Text, FlatList,Image, KeyboardAvoidingView, Dimensions} from 'react-native';
 import auth from '@react-native-firebase/auth'
 import database from '@react-native-firebase/database'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
 
 import {timelinePage} from './styles';
 import {PostItem, PostInput, Header, TopicSelectModal} from '../components';
 
 const user = auth().currentUser; // firebase kullanildiginda usestorage yada redux a
 // gerek kalmasdan , bu sekilde verilere ulasmamk mumkun.
-console.log('buuuu',user.email.split('@')[0])
+
 const Timeline = () => {
 
   const [topicModalFlag,setTopicModalFlag] = useState(true)
   const [selectedTopic,setSelectedTopic] = useState(null)
   const [postList,setPostList] = useState([])
-  const [postItem,setPostItem] =useState({})
 
+  
+ 
   const selectingTopic =(value)=>{
     database().ref(`/${selectedTopic}/`).off('value')
 
@@ -30,17 +31,16 @@ const Timeline = () => {
     .on('value',(snapshot)=>{
       const data  = snapshot.val();
       let formattedData =[]
-      console.log(data)
-   
       data == null ?  formattedData = []  : formattedData = Object.keys(data).map((key) =>({...data[key]}))
       formattedData.sort((a,b) =>{
       return new Date(b.time) - new Date(a.time)
       })
-
+      
       setPostList(formattedData)
     })
-
+    
   }
+  
   
   const sendingPost = (value)=>{
     const postObject = {
@@ -48,8 +48,8 @@ const Timeline = () => {
       postText : value,
       time : moment().toISOString()
     }
-    setPostItem(postObject)
-    postObject.postText && database().ref(`${selectedTopic}/`).push(postItem)
+   
+    postObject.postText && database().ref(`${selectedTopic}/`).push(postObject)
   }
 
 
@@ -60,7 +60,7 @@ const Timeline = () => {
   return (
     <SafeAreaView style={timelinePage.container}>
       <KeyboardAvoidingView 
-      style={{flex: 1, backgroundColor: '#cfd8dc'}}
+      style={{flex: 1}}
       behavior = {Platform.OS == 'ios' ? 'padding' : 'height' }>
   
       <View style={timelinePage.container}>

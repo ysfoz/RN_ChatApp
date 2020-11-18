@@ -46,7 +46,7 @@ const Login = (props) => {
       style={{flex: 1, backgroundColor: '#cfd8dc'}}
       behavior = {Platform.OS == 'ios' ? 'padding' : 'height' }>
 
-        <LinearGradient colors={['black','#FCEA1D','black']} style={authStyle.linearGradient} >
+        <LinearGradient colors={['black','#FDE100','black']} style={authStyle.linearGradient} >
         <ScrollView contentContainerStyle={{flex: 1}}>
           <View style={authStyle.container}>
 
@@ -73,7 +73,7 @@ const Login = (props) => {
             />
 
             <Button title = 'Sign In' onPress={login}/>
-            <Button title = 'Sign Up' noBorder onPress = {()=> props.navigation.navigate('Sign')}
+            <Button title = ' Sign Up ' noBorder onPress = {()=> props.navigation.navigate('Sign')}
             />
           </View>
          

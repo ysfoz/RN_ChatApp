@@ -1223,9 +1223,9 @@
     "@babel/types" "^7.0.0"
 
 "@types/babel__template@*":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.0.3.tgz#b8aaeba0a45caca7b56a5de9459872dde3727214"
-  integrity sha512-uCoznIPDmnickEi6D0v11SBpW0OuVqHJCa7syXqQHy5uktSCreIlt0iglsCnmvz8yCb38hGcWeseA8cWJSwv5Q==
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.4.0.tgz#0c888dd70b3ee9eebb6e4f200e809da0076262be"
+  integrity sha512-NTPErx4/FiPCGScH7foPyr+/1Dkzkni+rHiYHHoTjvwou7AQzJkNeD60A9CXRy+ZEN2B1bggmkTMCDb+Mv5k+A==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
@@ -1280,9 +1280,9 @@
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
 
 "@types/node@*":
-  version "14.14.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.7.tgz#8ea1e8f8eae2430cf440564b98c6dfce1ec5945d"
-  integrity sha512-Zw1vhUSQZYw+7u5dAwNbIA9TuTotpzY/OF7sJM9FqPOF3SPjKnxrjoTktXDZgUjybf4cWVBP7O8wvKdSaGHweg==
+  version "14.14.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.8.tgz#2127bd81949a95c8b7d3240f3254352d72563aec"
+  integrity sha512-z/5Yd59dCKI5kbxauAJgw6dLPzW+TNOItNE00PkpzNwUIEwdj/Lsqwq94H5DdYBX7C13aRA0CY32BK76+neEUA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1312,9 +1312,9 @@
     "@types/yargs-parser" "*"
 
 "@types/yargs@^15.0.0":
-  version "15.0.9"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-15.0.9.tgz#524cd7998fe810cdb02f26101b699cccd156ff19"
-  integrity sha512-HmU8SeIRhZCWcnRskCs36Q1Q00KBV6Cqh/ora8WN1+22dY07AZdn6Gel8QZ3t26XYPImtcL8WV/eqjhVmMEw4g==
+  version "15.0.10"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-15.0.10.tgz#0fe3c8173a0d5c3e780b389050140c3f5ea6ea74"
+  integrity sha512-z8PNtlhrj7eJNLmrAivM7rjBESG6JwC5xP3RVk12i/8HVP7Xnx/sEmERnRImyEuUaJfO942X0qMOYsoupaJbZQ==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -2559,6 +2559,11 @@ escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+
+escape-string-regexp@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz#a30304e99daa32e23b2fd20f51babd07cffca344"
+  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
@@ -5167,9 +5172,9 @@ node-notifier@^6.0.0:
     which "^1.3.1"
 
 node-stream-zip@^1.9.1:
-  version "1.11.7"
-  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.11.7.tgz#0618f590ad2ee3df7daa10a2e4fe8c6222821d34"
-  integrity sha512-tpJYTP3wgNcgCH4dsXC9x+K7No2qNzDRwoTaW9LPm39sA5elxWdSKHcv6j5TIPmjyOcxx9LoEvSdR16mi1Rfdg==
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.12.0.tgz#f69af78799531b928662f4900d345387fa0b3777"
+  integrity sha512-HZ3XehqShTFj9gHauRJ3Bri9eiCTOII7/crtXzURtT14NdnOFs9Ia5E82W7z3izVBNx760tqwddxrBJVG52Y1Q==
 
 normalize-package-data@^2.5.0:
   version "2.5.0"
@@ -5691,9 +5696,9 @@ range-parser@~1.2.1:
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
 react-devtools-core@^4.6.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.9.0.tgz#39cc4589b4c6fbcb6a18e529ce745a1af3e63ae5"
-  integrity sha512-3NyHXW1ClqxEXdHunawAytDxiIxs620oP3wB8DHsbx1fkGgqjMkwlyHVf0zmES/b4ffqzJySowRwSYds/uAHzw==
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.10.0.tgz#027ed231f851e5e9d697812bb905648ab822ec48"
+  integrity sha512-5m5VBtpjuHI7odyk3GAR3BJq3/IHQ0fVZ0+h8zUvoHulSj7Z9hp9d9n4Y1HmSZZxv7NUKfBtsnH+NfLNFDtfog==
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
@@ -5739,9 +5744,9 @@ react-native-modal@^11.5.6:
     react-native-animatable "1.3.3"
 
 react-native-reanimated@^1.13.1:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.13.1.tgz#c370c32cc4d447ae896cb029bb9c6a2f7608c5b4"
-  integrity sha512-3sF46jts9MbktgIasf0sTM8uhOYO5a5Q3YyQ4X1jjSE82n/fY2nW3XTFsLGfLEpK2ir4XSDhQWVgFHazaXZTww==
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.13.2.tgz#1ae5457b24b4913d173a5a064bb28eae7783d293"
+  integrity sha512-O+WhgxSjOIzcVdAAvx+h2DY331Ek1knKlaq+jsNLpC1fhRy9XTdOObovgob/aF2ve9uJfPEawCx8381g/tUJZQ==
   dependencies:
     fbjs "^1.0.0"
 
@@ -5751,9 +5756,9 @@ react-native-safe-area-context@^3.1.9:
   integrity sha512-wmcGbdyE/vBSL5IjDPReoJUEqxkZsywZw5gPwsVUV1NBpw5eTIdnL6Y0uNKHE25Z661moxPHQz6kwAkYQyorxA==
 
 react-native-screens@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.14.0.tgz#2f0534c76e5bd0a95908ca61ec5d1cb7818d5f1e"
-  integrity sha512-7EfxpYiJVvlFQNb1NlkEz7JRELVMLNIsrKo8jHq0+vXbDq+UxnAm/dMeYIXi8hY5iwqzk43uNPL8VyGPcLfBGQ==
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.15.0.tgz#9b97c1881c4fcdf304bf363f0013225901625f44"
+  integrity sha512-qTSQPy0WKHtlb8xt5gY0Gt6sdvfQUQAnFSqgsggW9UEvySbkHzpqOrOYNA79Ca8oXO0dCFwp6X8buIiDefa7+Q==
 
 react-native-vector-icons@^7.1.0:
   version "7.1.0"
@@ -6497,9 +6502,11 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 stack-utils@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
-  integrity sha512-MTX+MeG5U994cazkjd/9KNAapsHnibjMLnfXodlkXw76JEea0UiNzrqidzo1emMwk7w5Qhc9jd4Bn9TBb1MFwA==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.3.tgz#db7a475733b5b8bf6521907b18891d29006f7751"
+  integrity sha512-WldO+YmqhEpjp23eHZRhOT1NQF51STsbxZ+/AdpFD+EhheFxAe5d0WoK4DQVJkSHacPrJJX3OqRAl9CgHf78pg==
+  dependencies:
+    escape-string-regexp "^2.0.0"
 
 stacktrace-parser@^0.1.3:
   version "0.1.10"

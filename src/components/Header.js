@@ -14,7 +14,7 @@ const Header = (props) => {
        <Icon 
        name = 'hexagon-multiple' 
        size ={30} 
-       color = 'yellow' 
+       color = '#FDE100' 
        onPress={props.onTopicModalSelect}
        style={{marginRight:10}}
        />
@@ -22,7 +22,7 @@ const Header = (props) => {
       <Icon 
        name = 'login' 
        size ={30} 
-       color = 'yellow' 
+       color = '#FDE100' 
        onPress={props.onLogOut}/>
      </View>
     </View>
