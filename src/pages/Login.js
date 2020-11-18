@@ -29,7 +29,7 @@ const Login = (props) => {
       .signInWithEmailAndPassword(userEmail,userPass)
       .then(() => props.navigation.navigate('Timeline'))
       .catch((error) => Alert.alert('Gelb-Schawrz',resolveAuthError(error.code)))
- }else{Alert.alert('Gelb-Schwarz','empty values')}
+ }else{Alert.alert('Gelb-Schwarz','Bitte geben Sie eine gültige E-Mail-Adresse und ein Passwort ein.')}
 }
 // await ile bu sekilde yazilir
 // async function login(){  
@@ -59,21 +59,21 @@ const Login = (props) => {
           <View style={{flex:1}}>
             <Input
             inputProps = {{
-              placeholder : 'type your email',
+              placeholder : 'Schreiben Sie Ihre Email',
               keyboardType: 'email-address'
             }}
             onType ={(value) => setUserEmail(value)}
             />
             <Input
             inputProps = {{
-              placeholder : 'Type your Password',
+              placeholder : 'Schreiben Sie Ihr Passwort',
               secureTextEntry:true
             }}
             onType ={(value) => setUserPass(value)}
             />
 
-            <Button title = 'Sign In' onPress={login}/>
-            <Button title = ' Sign Up ' noBorder onPress = {()=> props.navigation.navigate('Sign')}
+            <Button title = 'Einlogen' onPress={login}/>
+            <Button title = ' Anmelden ' noBorder onPress = {()=> props.navigation.navigate('Sign')}
             />
           </View>
          

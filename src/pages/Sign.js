@@ -32,7 +32,7 @@ const Sign = (props) => {
         Alert.alert('Gelb-Schwarz','Es gibt ein Problem')
       } 
     }else{
-      Alert.alert('Gelb-Schwarz','Password are not match')
+      Alert.alert('Gelb-Schwarz','Passwörter stimmen nicht überein')
     }
   }
   return (
@@ -59,14 +59,14 @@ const Sign = (props) => {
             />
             <Input
             inputProps = {{
-              placeholder : 'Kreativieren Sie Ihre Pass',
+              placeholder : 'Kreativieren Sie Ihre Passwort',
               secureTextEntry: true
             }}
             onType = {(value)=> setUserPass(value)}
             
             /><Input
             inputProps = {{
-              placeholder : 'Scrieben Sie  das Pass nochmal',
+              placeholder : 'Scrieben Sie das Passwort nochmal,bitte',
               secureTextEntry: true
             }}
             onType = {(value)=> setPassRepeat(value)}
