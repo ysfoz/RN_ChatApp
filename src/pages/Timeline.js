@@ -6,7 +6,7 @@ import database from '@react-native-firebase/database'
 
 
 import {timelinePage} from './styles';
-import {PostItem, PostInput, Header, TopicSelectModal} from '../components';
+import {PostItem, PostInput, Header, TopicSelectModal,AddTopic} from '../components';
 
 const user = auth().currentUser; // firebase kullanildiginda usestorage yada redux a
 // gerek kalmasdan , bu sekilde verilere ulasmamk mumkun.
@@ -16,9 +16,8 @@ const Timeline = () => {
   const [topicModalFlag,setTopicModalFlag] = useState(true)
   const [selectedTopic,setSelectedTopic] = useState(null)
   const [postList,setPostList] = useState([])
+  const [addTopicFlag,setAddTopicFlag] = useState(false)
 
-  
- 
   const selectingTopic =(value)=>{
     database().ref(`/${selectedTopic}/`).off('value')
 
@@ -54,7 +53,6 @@ const Timeline = () => {
 
 
   const renderPosts = ({item}) => <PostItem post ={item} />
-
   
 
   return (
@@ -68,6 +66,7 @@ const Timeline = () => {
         title ={selectedTopic}
         onTopicModalSelect = {() => setTopicModalFlag(true)}
         onLogOut = {() => auth().signOut()}
+        addChannel = {() => setAddTopicFlag(true)}
         />
         <View style={{flex:1}}>
         <Image 
@@ -93,7 +92,12 @@ const Timeline = () => {
         visibility = {topicModalFlag}
         onClose = {()=> selectedTopic && setTopicModalFlag(false)}
         onTopicSelect ={selectingTopic}
-       
+        // onDeleteTopic = {() => deleteTopic(selectedTopic)}
+        />
+
+        <AddTopic
+        visibility = {addTopicFlag}
+        onBackdropPress = {()=> setAddTopicFlag(false)}
         />
       </View>
       </KeyboardAvoidingView>

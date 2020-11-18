@@ -11,6 +11,13 @@ const Header = (props) => {
        <Text style= {header.text}>#{props.title}</Text>
      </View>
      <View style= {{justifyContent:'center',flexDirection:'row'}}>
+       <Icon
+       name = 'plus-box-multiple'
+       size={30}
+       color = '#FDE100'
+       style={{marginRight:15}}
+       onPress= {props.addChannel}
+       />
        <Icon 
        name = 'hexagon-multiple' 
        size ={30} 

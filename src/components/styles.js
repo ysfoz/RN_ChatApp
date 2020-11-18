@@ -133,5 +133,53 @@ export const topicModal = StyleSheet.create({
      fontSize: 20,
      fontWeight: 'bold',
      color: '#78909c'
-  },  
+  },
+  addtopicmodal:{
+    
+  },
+  addtopiccontainer:{
+    backgroundColor:'rgba(255,229,204,0.6)',
+    borderRadius:10
+
+  },
+  touchable:{
+    backgroundColor:'rgba(0,0,0,0.6)',
+    marginVertical:10,
+    borderWidth:2,
+    width:160,
+    marginHorizontal:13,
+    borderRadius:6,
+    
+  },
+  text:{
+    fontSize:20,
+    padding:10,
+    textAlign:'center',
+    fontWeight:'bold',
+    color:'white'
+    
+  },
+  textinput:{
+    fontSize:20,
+    padding:10,
+    borderBottomWidth:1,
+    
+   
+   
+    
+  },
+  scrollText:{
+    fontSize:20,
+    marginHorizontal:5,
+    padding:10,
+    borderWidth:1,
+    backgroundColor:'rgba(255,255,51,0.3)',
+    borderRadius:6
+  },
+  scrollButton:{
+    backgroundColor:'rgba(255,229,204,0.4)',
+    marginBottom:10
+    
+  }
+
 });
